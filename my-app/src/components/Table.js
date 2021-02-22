@@ -8,8 +8,8 @@ function Table({ employees }) {
     name: {title, first, last},
      gender, email, cell, phone }) => {
     return (
-      <table>
-       <thead>
+      <table class="table table-striped">
+       <thead >
         <tr>
          <th>title</th>
          <th>first</th>
@@ -45,5 +45,8 @@ function Table({ employees }) {
     );
   });
 }
+
+
+
 
 export default Table;

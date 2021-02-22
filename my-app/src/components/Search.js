@@ -1,3 +1,5 @@
+const [title, setTitle] = useState('')
+
 const SearchBar = () => (
     <form action="/" method="get">
         <label htmlFor="header-search">
@@ -8,7 +10,9 @@ const SearchBar = () => (
             id="header-search"
             placeholder="Search Employees"
             name="s" 
+            
         />
+        <input onChange={event => setTitle(event.target.value)} />
         <button type="submit">Search</button>
     </form>
 );

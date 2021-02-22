@@ -1,6 +1,7 @@
 import './App.css';
 import Header from "./components/Header";
-import Search from './components/Search';
+import Search from './components/SearchForm';
+import SearchResults from "./components/SearchResults";
 import Main from "./components/Main";
 
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
     <Header />
     <Search />
+    <SearchResults />
      <Main />
   
     </div>

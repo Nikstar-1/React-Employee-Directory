@@ -1,4 +1,15 @@
 import React, { Component } from "react";
+import './App.js';
+
+/*var myAPI ="employees";
+let myAPI = "employees";
+const myAPI = "employees";
+
+// referencing different files
+
+var myEmployee = require("/API.js");
+*/
+import myEmployee from "/API.js"
 
 class Search extends Component {
     state = {

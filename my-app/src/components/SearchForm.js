@@ -19,8 +19,6 @@ export default SearchBar;
 */
 
 import React, { Component } from "react";
-import SearchForm from "react";
-
 
 function SearchForm(input) {
   return (

@@ -1,18 +1,20 @@
-import './App.css';
 import Header from "./components/Header";
-import Search from './components/SearchForm';
+import Search from './components/Search';
 import SearchResults from "./components/SearchResults";
 import Main from "./components/Main";
 
+//import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-    <Header />
+      <Header />
     <Search />
+    {/* 
     <SearchResults />
+     */}
      <Main />
-  
     </div>
   );
 }

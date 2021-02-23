@@ -1,17 +1,25 @@
+import API from "../utils/API.js"
 import React, { Component } from "react";
-import './App.js';
-
-/*var myAPI ="employees";
-let myAPI = "employees";
-const myAPI = "employees";
+import SearchResults from "./SearchResults"
+import axios from "axios";
+//import SearchResults from "./modules/components/";
+/*var myVariable = "string";
+let myVariable2 = "string";
+const myVariable3 = "string";
 
 // referencing different files
-
-var myEmployee = require("/API.js");
+var myVariable = require("/path/to/myVariableExport.js");
+import myVariable from "/path/to/myVariableExport.js"
 */
-import myEmployee from "/API.js"
 
-class Search extends Component {
+export default { 
+    getUsers: function () {
+  return axios.get("https://randomuser.me/api/?results=25");
+
+    }
+};
+
+class SearchForm extends Component {
     state = {
       search: "",
       employees: [],
@@ -48,7 +56,7 @@ class Search extends Component {
             <SearchForm
               handleFormSubmit={this.handleFormSubmit}
               handleInputChange={this.handleInputChange}
-              breeds={this.state.employees}
+              employees={this.state.employees}
             />
             <SearchResults results={this.state.results} />
          
@@ -57,4 +65,4 @@ class Search extends Component {
     }
   }
   
-  export default Search;
+  

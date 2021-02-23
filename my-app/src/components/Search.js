@@ -1,4 +1,8 @@
-/*const SearchBar = () => (
+import React, { Component } from "react";
+
+import axios from "axios";
+
+const SearchBar = () => (
     <form action="/" method="get">
         <label htmlFor="header-search">
             <span className="visually-hidden">Search Directory</span>
@@ -16,9 +20,9 @@
 
 
 export default SearchBar;
-*/
 
-import React, { Component } from "react";
+
+
 
 function SearchForm(input) {
   return (
@@ -48,4 +52,3 @@ function SearchForm(input) {
   );
 }
 
-export default SearchForm;

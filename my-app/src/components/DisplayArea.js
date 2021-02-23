@@ -1,5 +1,5 @@
 import React, {Component} from 'react'; 
-import API from "../API";
+import API from "../utils/API";
 import EmployeesDiplay from "./EmployeesDisplay"; 
 
 export default class Main extends Component {

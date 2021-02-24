@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 const SearchBar = () => (
+  
     <form action="/" method="get">
         <label htmlFor="header-search">
             <span className="visually-hidden">Search Directory</span>
@@ -12,10 +13,12 @@ const SearchBar = () => (
             id="header-search"
             placeholder="Search Employees"
             name="s" 
+            
         />
         <button type="submit">Search</button>
     </form>
 );
+
 
 
 
@@ -26,6 +29,8 @@ export default SearchBar;
 
 function SearchForm(input) {
   return (
+    
+    
     <form className="search">
       <div className="form-group">
         <label htmlFor="employees">Employee Name:</label>

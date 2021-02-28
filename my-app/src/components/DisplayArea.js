@@ -6,13 +6,26 @@ import SearchForm  from "./SearchForm";
 export default class Main extends Component {
   state = {
     employees: [],
-    filteredEmployees: [{}],
+    soretingOrder: "descend",
+    filteredEmployees: [],
   };
+
+  handleFilter = e => {
+    const filter = e.target.value; 
+    const filteredEmployeesList = this.state.employees.filter(employee => {
+        let employeeValues = Object.values(employee).join("").toLowerCase();
+        return employeeValues.indexOf(filter.toLowerCase()) !== -1; 
+    })
+    this.setState({filteredEmployees: filteredEmployeesList})
+  }
+
   componentDidMount() {
     API.getUsers().then((results) => {
+        
       console.log(results.data);
       this.setState({
         employees: results.data.results,
+        filteredEmployees: results.data.results
       });
     });
   }
@@ -21,27 +34,14 @@ export default class Main extends Component {
     return (
       <>
         <SearchForm handleFilter={this.handleFilter} />
+    
         <div>
-          <h1>Data section</h1>
-          <EmployeesDiplay employees={this.state.employees} />
+          
+          <EmployeesDiplay employees={this.state.filteredEmployees} />
         </div>
       </>
     );
   }
 
-  handleFilter = (event) => {
-    console.log(event.target.value);
-    ///// and add the code for filter here
-    const list = this.state.users.filter((d) => this.state.input === "" || d.includes(this.state.input)).map((d, index) => <li key={index}>{d}</li>);
-
-    return (
-      <div>
-        <input value={this.state.input} type="text" onChange={this.onChangeHandler.bind(this)} />
-        <div>
-          <h1>Data section</h1>
-          <EmployeesDiplay employees={this.state.employees} />
-        </div>
-      </div>
-    );
-  };
+ 
 }

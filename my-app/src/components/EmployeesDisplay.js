@@ -1,11 +1,12 @@
 import React from "react";
 import Table from "./Table";
 
-function EmployeesDisplay({ employees }) {
+function EmployeesDisplay({ employees, handleSort }) {
   return (
     <>
       <div>
-        <Table employees={employees} />
+        <Table employees={employees}
+        handleSort={handleSort} />
       </div>
     </>
   );

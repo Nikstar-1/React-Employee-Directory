@@ -48,3 +48,8 @@ JavaScript
 React.js
 HTML
 CSS
+
+Author
+Rekha Kumari
+
+Rekha Kumari © 2021. All rights reserved.
